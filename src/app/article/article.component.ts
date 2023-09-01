@@ -41,6 +41,7 @@ export class ArticleComponent {
   article.title = updateTitle.value
   article.link = updateLink.value
   this.update.emit(article)
+  return false
  }
   
 

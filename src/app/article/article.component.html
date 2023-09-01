@@ -1,16 +1,23 @@
-<div>
-    <!-- <p>{{article.id}}</p> -->
-    <p>Votes: {{article.votes}}</p>
-    <p>Title: {{article.title}}</p>
-    <p>Link: {{article.link}}</p>
-    <button class="up" (click)="voteUp()"> vote up</button>
-    <button class="down" (click)="voteDown()"> vote down</button>
-    <button (click)="deleteArticle(article.id)"> Delete</button>
-    <button (click)="showForm = !showForm"> Update</button>
-    <form *ngIf="showForm">
-        <input name="updateTitle" type="text" placeholder="title" #title>
-        <input name="updateLink" type="text" placeholder="link" #link>
-        <button (click)="updateArticle(article,title,link)">Envoyer</button>
+<div class="card m-3 w-50 mx-auto">
+    <div class="card-body text-center">
+      <p class="card-text">Votes: {{ article.votes }}</p>
+      <p class="card-text">Title: {{ article.title }}</p>
+      <p class="card-text">Link: {{ article.link }}</p>
+      <div class="btn-group">
+        <button class="btn btn-success" (click)="voteUp()">Vote Up</button>
+        <button class="btn btn-danger" (click)="voteDown()">Vote Down</button>
+        <button class="btn btn-warning" (click)="deleteArticle(article.id)">Delete</button>
+        <button class="btn btn-primary" (click)="showForm = !showForm">Update</button>
+      </div>
+      <form class="m-3" *ngIf="showForm">
+        <div class="form-group m-3">
+          <input name="updateTitle" type="text" class="form-control" placeholder="Title" #title>
+        </div>
+        <div class="form-group m-3">
+          <input name="updateLink" type="text" class="form-control" placeholder="Link" #link>
+        </div>
+        <button class="btn btn-primary m-3" (click)="updateArticle(article, title, link)">Update</button>
       </form>
+    </div>
 </div>
 

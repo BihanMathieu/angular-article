@@ -10,7 +10,6 @@ import { HttpService } from './http.service';
 export class AppComponent implements OnInit {
   articles: Article[] = [];
   article!: Article;
-
   constructor(private service: HttpService) {}
 
   ngOnInit(): void {
@@ -23,7 +22,7 @@ export class AppComponent implements OnInit {
 
   addArticle(title: HTMLInputElement, link: HTMLInputElement) {
     this.service.addArticle(new Article(title.value, link.value)).subscribe((data) => this.getArticles());
-    title.value = '';
+    title.value= '';
     link.value = '';
     return false;
   }

@@ -1,15 +1,16 @@
-<form>
-  <h3>Add a Link</h3>
-  <div class="field">
-    <label for="title">Title:</label>
-    <input name="title" #newTitle>
-  </div>
-  <div class="field">
-    <label for="link">Link:</label>
-    <input  name="link" #newLink>
-  </div>
-  <button (click)="addArticle(newTitle, newLink)">Submit link</button>
-</form>
-
+<div class="d-flex justify-content-center bg-secondary p-4"> <!-- Utilisation de la classe bg-secondary pour la couleur grise -->
+  <form>
+    <h3>Add a Link</h3>
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" class="form-control" id="title" name="title" #newTitle>
+    </div>
+    <div class="form-group">
+      <label for="link">Link:</label>
+      <input type="text" class="form-control" id="link" name="link" #newLink>
+    </div>
+    <button type="button" class="btn btn-primary m-3" (click)="addArticle(newTitle, newLink)">Submit link</button>
+  </form>
+</div>
 <app-article *ngFor="let article of sortedArticles()" [article]="article" (currentArticle)="deleteArticle($event)" (update)="updateArticle($event)"
 ></app-article>
