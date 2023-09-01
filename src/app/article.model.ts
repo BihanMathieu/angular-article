@@ -12,12 +12,12 @@ export class Article {
         this.votes = votes || 0
     }
 
-    voteUp(){
-        this.votes++
-    }
+    // voteUp(){
+    //     this.votes++
+    // }
 
-    voteDown(){
-        this.votes--
-    }
+    // voteDown(){
+    //     this.votes--
+    // }
 
 }

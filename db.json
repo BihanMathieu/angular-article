@@ -1,12 +1,6 @@
 {
   "articles": [
     {
-      "id": 1,
-      "title": "aaaaaaaaa",
-      "link": "aaaaaaaaaaaaaa",
-      "votes": 1
-    },
-    {
       "link": "qsdqsdqsdqsdqsdqsd",
       "title": "qsdqsd",
       "votes": 0,
@@ -23,6 +17,12 @@
       "title": "xwcwx",
       "votes": 0,
       "id": 7
+    },
+    {
+      "link": "dddddddddd",
+      "title": "ddddddddd",
+      "votes": 3,
+      "id": 8
     }
   ],
   "comments": [

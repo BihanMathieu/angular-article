@@ -18,11 +18,11 @@ export class HttpService {
     return this.client.post<Article[]>('http://localhost:3000/articles', article)
   }
 
-  deleteArticle(id:number):Observable<any>{
-    return this.client.delete('http://localhost:3000/articles/'+id)
+  deleteArticle(id:number):Observable<Article>{
+    return this.client.delete<Article>('http://localhost:3000/articles/'+id)
   }
 
-  updateArticle(article:Article):Observable<any>{
-    return this.client.put('http://localhost:3000/articles/'+article.id, article)
+  updateArticle(article:Article):Observable<Article>{
+    return this.client.put<Article>('http://localhost:3000/articles/'+article.id, article)
   }
 }

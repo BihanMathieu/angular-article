@@ -15,7 +15,7 @@ export class ArticleComponent {
 
   @Output()
   currentArticle = new EventEmitter<number>
-
+  
   @Output()
   update = new EventEmitter<Article>
 

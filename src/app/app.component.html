@@ -1,6 +1,6 @@
-<div class="d-flex justify-content-center bg-secondary p-4"> <!-- Utilisation de la classe bg-secondary pour la couleur grise -->
+<div class="d-flex justify-content-center bg-secondary p-4">
   <form>
-    <h3>Add a Link</h3>
+    <h3 class="text-center">Add a Link</h3>
     <div class="form-group">
       <label for="title">Title:</label>
       <input type="text" class="form-control" id="title" name="title" #newTitle>
@@ -9,7 +9,9 @@
       <label for="link">Link:</label>
       <input type="text" class="form-control" id="link" name="link" #newLink>
     </div>
-    <button type="button" class="btn btn-primary m-3" (click)="addArticle(newTitle, newLink)">Submit link</button>
+    <div class="text-center">
+      <button type="button" class="btn btn-primary m-3" (click)="addArticle(newTitle, newLink)">Submit link</button>
+    </div>
   </form>
 </div>
 <app-article *ngFor="let article of sortedArticles()" [article]="article" (currentArticle)="deleteArticle($event)" (update)="updateArticle($event)"
