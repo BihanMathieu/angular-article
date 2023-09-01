@@ -1,0 +1,32 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "qsdqsd",
+      "link": "qsdqsdqsdqsdqsdqsd",
+      "votes": 1
+    },
+    {
+      "link": "gfgfgfg",
+      "title": "fgfgfgfgf",
+      "votes": 0,
+      "id": 4
+    },
+    {
+      "link": "sdsdsd",
+      "title": "dsdsds",
+      "votes": 1,
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
